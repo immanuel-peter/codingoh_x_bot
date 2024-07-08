@@ -3,20 +3,17 @@ from openai import OpenAI
 import random
 import os
 
-openai_api_key = os.environ.get('OPENAI_API_KEY')
-x_consumer_key = os.environ.get('X_CONSUMER_KEY')
-x_consumer_secret = os.environ.get('X_CONSUMER_SECRET')
-x_access_token = os.environ.get('X_ACCESS_TOKEN')
-x_access_token_secret = os.environ.get('X_ACCESS_TOKEN_SECRET')
+# Retrieve API keys and tokens from environment variables
+openai_api_key = os.getenv('OPENAI_API_KEY')
+x_consumer_key = os.getenv('X_CONSUMER_KEY')
+x_consumer_secret = os.getenv('X_CONSUMER_SECRET')
+x_access_token = os.getenv('X_ACCESS_TOKEN')
+x_access_token_secret = os.getenv('X_ACCESS_TOKEN_SECRET')
 
-print("Open AI API Key: ", openai_api_key)
-print("X Consumer Key: ", x_consumer_key)
-print("X Consumer Secret: ", x_consumer_secret)
-print("X Access Token: ", x_access_token)
-print("X Access Token Secret: ", x_access_token_secret)
+# Initialize OpenAI client
+openai_client = OpenAI(api_key=openai_api_key)
 
-openai_client = OpenAI()
-
+# Initialize Tweepy client
 x_client = tweepy.Client(
     consumer_key=x_consumer_key,
     consumer_secret=x_consumer_secret,
@@ -24,6 +21,7 @@ x_client = tweepy.Client(
     access_token_secret=x_access_token_secret
 )
 
+# List of tweet prompts
 tweet_prompts = [
     "Describe the feeling of debugging a 500-line error in a project just before a major release, using a metaphor from a famous movie.",
     "Compare the journey of learning a new programming language to a well-known adventure book or movie.",
@@ -90,4 +88,5 @@ def new_tweet():
         else:
             raise e # Raise other exceptions
 
+# Run the new tweet function to post a tweet
 new_tweet()
