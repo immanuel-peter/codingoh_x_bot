@@ -40,7 +40,7 @@ The **CodingOH Twitter Bot** is a Python-based bot designed to engage the develo
 1. **Run the bot locally**:
 
    ```bash
-   python your_script_name.py  # Replace with the actual name of your script
+   python generate_tweet.py  # Replace with the actual name of your script
    ```
 
 2. **Deploy with GitHub Actions**:
