@@ -81,6 +81,9 @@ def new_tweet():
         response = x_client.create_tweet(text=new_tweet)
         print(response.data["text"])
         break # exit the loop if successful
+    except tweepy.errors.Forbidden as e:
+        print("403 Forbidden Error")
+        pass
     except Exception as e:
         if "Your Tweet text is too long" in str(e):
             print("Tweet is too long")
