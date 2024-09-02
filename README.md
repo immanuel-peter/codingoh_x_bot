@@ -26,7 +26,7 @@ The **CodingOH Twitter Bot** is a Python-based bot designed to engage the develo
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/codingoh_x_bot.git
+   git clone https://github.com/jesuschrist-immanuel/codingoh_x_bot.git
    cd codingoh_x_bot
    ```
 
