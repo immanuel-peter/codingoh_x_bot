@@ -1,4 +1,4 @@
-f# CodingOH Twitter Bot
+# CodingOH Twitter Bot
 
 [![Follow @CodingOH on X](https://img.shields.io/twitter/follow/CodingOH?style=social)](https://x.com/CodingOH)
 
